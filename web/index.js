@@ -6,6 +6,7 @@ let isPaused = false;
 function startTimer() {
     if (time === _maxSeconds) {
         time = 0;
+        document.getElementById("timer").innerHTML = '00';
         isPaused = false;
     }
 

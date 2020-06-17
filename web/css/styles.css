@@ -16,7 +16,7 @@ body {
   height: 100vh; }
   .tracker__frame {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: url(../img/kettlebell-2.png);
@@ -42,3 +42,32 @@ body {
       font-size: 20rem;
       opacity: 1;
       z-index: -1; }
+    .tracker__frame__clock:active {
+      background-color: blue; }
+  .tracker__card {
+    position: relative;
+    top: 8%;
+    left: 42%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    height: 22rem;
+    width: 17rem;
+    background-color: #0c709e; }
+    .tracker__card__exercise-details {
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+      .tracker__card__exercise-details .input-field {
+        color: white;
+        padding: .5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase; }
+      .tracker__card__exercise-details .submit-exercise {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        width: 14rem; }

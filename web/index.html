@@ -8,6 +8,24 @@
 <body>
 
     <div class="tracker">
+        <div class="tracker__card">
+            <form action="" class="tracker__card__exercise-details">
+                <div class="input-field">
+                    <label for="exercise-name">Exercise</label><br>
+                    <input type="text" id="exercise-name" name="exercise-name" value=""><br>
+                </div>
+                <div class="input-field">
+                    <label for="exercise-weight">Weight</label><br>
+                    <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
+                </div>
+                <div class="input-field">
+                    <label for="exercise-reps">Reps</label><br>
+                    <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
+                </div>
+                <input type="submit" value="Add" class="submit-exercise">
+              </form> 
+                
+        </div>
         <div class="tracker__frame">
             <div class="tracker__frame__clock" onclick="startTimer()"></div>
             <span id="timer" class="tracker__frame__clock__timer">
