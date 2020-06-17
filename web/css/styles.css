@@ -18,11 +18,27 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    background-image: url(../img/kettlebell-2.png);
+    height: 50rem;
+    width: 50rem; }
+    .tracker__frame__clock {
+      opacity: 0;
+      background-color: cyan;
+      border-radius: 50%;
+      height: 26rem;
+      width: 26rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(44%, 72%); }
+    .tracker__frame__clock:hover {
+      transition: all .2s;
+      opacity: .5; }
     .tracker__frame__clock__timer {
-      color: white;
       position: absolute;
+      top: 41%;
+      left: 30%;
+      color: rebeccapurple;
       font-size: 20rem;
-      left: 52%;
-      top: 60%;
-      transform: translate(-50%, -50%); }
+      opacity: 1;
+      z-index: -1; }
