@@ -16,20 +16,19 @@ body {
   height: 100vh; }
   .tracker__frame {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: url(../img/kettlebell-2.png);
     height: 50rem;
     width: 50rem; }
     .tracker__frame__clock {
+      position: absolute;
       opacity: 0;
       background-color: cyan;
       border-radius: 50%;
       height: 26rem;
       width: 26rem;
-      left: 50%;
-      top: 50%;
       transform: translate(44%, 72%); }
     .tracker__frame__clock:hover {
       transition: all .2s;
@@ -45,8 +44,7 @@ body {
     .tracker__frame__clock:active {
       background-color: blue; }
   .tracker__card {
-    position: relative;
-    top: 8%;
+    position: absolute;
     left: 42%;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -71,3 +69,30 @@ body {
         transform: translate(-50%, -50%);
         text-transform: uppercase;
         width: 14rem; }
+
+.card-stack {
+  position: relative;
+  top: 20%;
+  width: 10rem;
+  height: 20rem;
+  background-color: #777;
+  z-index: 2; }
+  .card-stack .cards {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #777; }
+    .card-stack .cards .card {
+      padding: 2rem;
+      background-color: cyan;
+      border-radius: 3px;
+      margin-left: -2rem;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.75);
+      transition: all .2s; }
+    .card-stack .cards .card:not(:first-child) {
+      margin-top: -2rem; }
+    .card-stack .cards .card:hover {
+      transform: translateX(3rem); }
+    .card-stack .cards .card:hover ~ .card {
+      background-color: red;
+      transform: translateY(2.1rem); }
