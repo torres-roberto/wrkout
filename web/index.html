@@ -2,89 +2,18 @@
 <head>
     <script src='index.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="card-stack">
-        <ul class="cards">
-            <li class="card">
-                <form action="" class="card-details">
-                        <label for="exercise-name">Exercise</label><br>
-                        <input type="text" id="exercise-name" name="exercise-name" value=""><br>
-                        <label for="exercise-weight">Weight</label><br>
-                        <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
-                        <label for="exercise-reps">Reps</label><br>
-                        <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
-                  </form> 
-            </li>
-            <li class="card">
-                                <form action="" class="card-details">
-                        <label for="exercise-name">Exercise</label><br>
-                        <input type="text" id="exercise-name" name="exercise-name" value=""><br>
-                        <label for="exercise-weight">Weight</label><br>
-                        <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
-                        <label for="exercise-reps">Reps</label><br>
-                        <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
-                  </form> 
-            </li>
-            <li class="card">
-                                <form action="" class="card-details">
-                        <label for="exercise-name">Exercise</label><br>
-                        <input type="text" id="exercise-name" name="exercise-name" value=""><br>
-                        <label for="exercise-weight">Weight</label><br>
-                        <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
-                        <label for="exercise-reps">Reps</label><br>
-                        <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
-                  </form> 
-            </li>
-            <li class="card">
-                                <form action="" class="card-details">
-                        <label for="exercise-name">Exercise</label><br>
-                        <input type="text" id="exercise-name" name="exercise-name" value=""><br>
-                        <label for="exercise-weight">Weight</label><br>
-                        <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
-                        <label for="exercise-reps">Reps</label><br>
-                        <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
-                  </form> 
-            </li>
-            <li class="card">
-                                <form action="" class="card-details">
-                        <label for="exercise-name">Exercise</label><br>
-                        <input type="text" id="exercise-name" name="exercise-name" value=""><br>
-                        <label for="exercise-weight">Weight</label><br>
-                        <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
-                        <label for="exercise-reps">Reps</label><br>
-                        <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
-                  </form> 
+    <section class="best-quilt">
+        <ul class="hits" id="hits">
+            <li class="hits__card">
+                <video src="videos/squat-sample.mp4" class="hits__card__content" autoplay loop></video>
             </li>
         </ul>
+        <div class="bar">
+            <a href="#" class="float-add" onclick="addHit()">+</a>
+        </div>
     </section>
-    <div class="tracker">
-        <div class="tracker__card">
-            <form action="" class="tracker__card__exercise-details">
-                <div class="input-field">
-                    <label for="exercise-name">Exercise</label><br>
-                    <input type="text" id="exercise-name" name="exercise-name" value=""><br>
-                </div>
-                <div class="input-field">
-                    <label for="exercise-weight">Weight</label><br>
-                    <input type="text" id="exercise-weight" name="exercise-weight" value=""><br>
-                </div>
-                <div class="input-field">
-                    <label for="exercise-reps">Reps</label><br>
-                    <input type="text" id="exercise-reps" name="exercise-reps" value=""><br><br>
-                </div>
-                <input type="submit" value="Add" class="submit-exercise">
-              </form> 
-                
-        </div>
-        <div class="tracker__frame">
-            <div class="tracker__frame__clock" onclick="startTimer()"></div>
-            <span id="timer" class="tracker__frame__clock__timer">
-                00
-            </span>
-        </div>
-    </div>
 </body>
 </html>

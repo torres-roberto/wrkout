@@ -42,3 +42,9 @@ function getTime() {
 
     document.getElementById("timer").innerHTML = timeStr;
 }
+
+function addHit() {
+    clone = document.querySelector(".hits").lastElementChild.cloneNode(true);
+    document.querySelector(".hits").appendChild(clone);
+    console.log('done');
+}

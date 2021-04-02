@@ -100,7 +100,77 @@ body {
         font-size: 1.5rem; }
     .card-stack .cards .card:not(:first-child) {
       margin-top: -17rem; }
+    .card-stack .cards .card {
+      transition: transform .5s; }
     .card-stack .cards .card:hover {
       transform: translateX(3rem); }
     .card-stack .cards .card:hover ~ .card {
       transform: translateY(12rem); }
+
+.best-quilt {
+  position: relative; }
+  .best-quilt .hits {
+    list-style-type: none;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #ecf4f3;
+    padding-bottom: 10rem; }
+    .best-quilt .hits__card {
+      position: relative;
+      margin: .5rem;
+      background-color: #68b0ab;
+      width: 25rem;
+      height: 25rem;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px #006a71;
+      display: flex;
+      justify-content: center; }
+      .best-quilt .hits__card__content {
+        position: fixed;
+        width: 22rem; }
+    .best-quilt .hits__card:after {
+      transition: all .2s ease-in-out;
+      position: absolute;
+      content: '';
+      width: 25rem;
+      height: 2rem;
+      z-index: 1;
+      bottom: 0;
+      background-color: black;
+      opacity: .2; }
+    .best-quilt .hits__card:hover:after {
+      padding: 15px;
+      content: '450 LB Squat';
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: 'PT Sans Narrow';
+      height: 8rem;
+      bottom: 0;
+      opacity: .7; }
+  .best-quilt .bar {
+    position: fixed;
+    height: 10rem;
+    width: 100%;
+    background-color: ff7e67;
+    box-shadow: 0 1px 3px black;
+    bottom: 20px; }
+
+.float-add {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: 006a71;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px black;
+  font-size: 3rem;
+  color: #ecf4f3;
+  text-decoration: none;
+  padding-top: 1rem; }
