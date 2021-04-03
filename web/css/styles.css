@@ -122,17 +122,24 @@ body {
     padding-bottom: 10rem; }
     .best-quilt .hits__card {
       position: relative;
+      transition: all .4s ease-out;
       margin: .5rem;
       background-color: #68b0ab;
+      overflow: hidden;
+      height: 2rem;
       width: 25rem;
-      height: 25rem;
+      opacity: 0;
       box-shadow: 0 1px 3px #006a71;
       display: flex;
       justify-content: center; }
       .best-quilt .hits__card__content {
-        width: 22rem;
-        overflow: hidden;
+        position: absolute;
+        width: 90%;
+        height: 90%;
         box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16), 0 14px 19px 0 rgba(0, 0, 0, 0.07); }
+    .best-quilt .hits__card.show {
+      height: 25rem;
+      opacity: 1; }
     .best-quilt .hits__card:after {
       content: '';
       transition: all .2s ease-in-out;
