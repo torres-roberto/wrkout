@@ -53,8 +53,16 @@ function addHit() {
     clone = document.querySelector(".hits").lastElementChild.cloneNode(true);
     clone.className = "hits__card";
     document.querySelector(".hits").appendChild(clone);
-    setTimeout(function() {
-        clone.className = "hits__card show";
-    }, 100);
+    
+
+    var anim = requestAnimationFrame(() => {
+        requestAnimationFrame(() => { 
+           showHitCard(clone); 
+        });
+    });
     console.log('done');
+}
+
+function showHitCard(card) {
+    card.className = "hits__card show";
 }
