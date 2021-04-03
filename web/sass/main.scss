@@ -164,7 +164,8 @@ body {
         list-style-type: none;
         display: flex;
         flex-flow: wrap row;
-        justify-content: space-around;
+        justify-content: center;
+        align-content: center;
         align-items: center;
 
         height: 100%;
@@ -173,38 +174,38 @@ body {
         padding-bottom: 10rem;
         
         &__card {
-            
             position: relative;
             margin: .5rem;
             background-color: #68b0ab;
             width: 25rem;
             height: 25rem;
-            border-radius: 3px;
+            // border-radius: 3px;
             box-shadow: 0 1px 3px #006a71;
             display: flex;
             justify-content: center;
 
             &__content {
-                position: fixed;
                 width: 22rem;
+                overflow: hidden;
+                box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
             }
         }
 
         &__card:after {
+            content: '';
             transition: all .2s ease-in-out;
             position: absolute;
-            content: '';
             width: 25rem;
-            height: 2rem;
-            z-index: 1;
+            height: 0;
             bottom: 0;
             background-color: black;
             opacity: .2;
+            z-index: 1;
         }
         
         &__card:hover:after {
-            padding: 15px;
             content: '450 LB Squat';
+            padding: 15px;
             color: white;
             font-size: 20px;
             font-weight: bolder;
@@ -222,6 +223,7 @@ body {
         background-color: ff7e67;
         box-shadow: 0 1px 3px black;
         bottom: 20px;
+        z-index: 2;
     }
     
 }
