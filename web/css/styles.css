@@ -161,6 +161,15 @@ body {
     box-shadow: 0 1px 3px black;
     bottom: 20px;
     z-index: 2; }
+    .best-quilt .bar .float-add {
+      transition: all .3s; }
+    .best-quilt .bar .float-add:hover {
+      transition: all .3s;
+      filter: brightness(115%); }
+    .best-quilt .bar .float-add:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 black;
+      filter: brightness(90%); }
 
 .float-add {
   position: fixed;
