@@ -202,8 +202,6 @@ body {
             opacity: 1;
         }
 
-
-
         &__card:after {
             content: '';
             transition: all .2s ease-in-out;
@@ -233,12 +231,15 @@ body {
         position: fixed;
         height: 10rem;
         width: 100%;
-        background-color: ff7e67;
+        background-color: rgb(78, 154, 6);// #ff7e67;
         box-shadow: 0 1px 3px black;
-        bottom: 20px;
+        bottom: 3rem;
         z-index: 2;
 
         .float-add {
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
             transition: all .3s;
         }
 
@@ -248,9 +249,22 @@ body {
         }
 
         .float-add:active {
-            transform: translateY(2px);
+            transform: translate(0, -47%);
             box-shadow: 0 0 0 black;
             filter: brightness(90%);
+        }
+
+        .wt {
+            top: 85%;
+            padding: 2rem 2rem;
+            background: transparent;
+            border: none;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            color: white;
+            font-family: monospace;
+            font-size: 3rem;
+            width: 80%;
         }
     }
     
