@@ -1,20 +1,44 @@
 <html>
 <head>
     <script src='index.js'></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="best-quilt">
-        <ul class="hits" id="hits">
-            <li class="hits__card">
-                <video src="videos/squat-sample.mp4" class="hits__card__content" autoplay loop></video>
-            </li>
-        </ul>
-        <div class="bar">
-            <input type="text" class="wt">
-            <a href="#" class="float-add" onclick="addHit()">+</a>
+    <div class="sections">
+    <aside class="column side-bar-xp">
+        <!-- <label for="daily-xp">daily xp</label> -->
+        <!-- <progress id="daily-xp" class="progress-bar" value="32" max="100">32%</progress> --> -->
+        <a href="#" class="progress">progress</a>
+    </aside>
+
+    <section class="column main-card">
+        <div>
+            <a href="#">profile</a>
+            <a href="#">settings</a>
+        </div>
+        <video src="videos/squat-sample.mp4" class="workout-vid" autoplay loop></video>
+        <ul class="best-cards">
+            <li>Today</li>
+            <li>Current Max</li>
+            <li>Target Max</li>
+        </ul>            
+        <div class="search-and-add-options">
+            <input>
+            <a class="exercise-list" href="#">excercise list</a>
+            <a class="add-exercise" href="#">add excercise</a>  
         </div>
     </section>
+
+    <aside class="column side-bar-log">
+        <ul>
+            <li>Bench</li>
+            <li>Bench</li>
+            <li>Bench</li>
+            <li>Bench</li>
+            <li>Bench</li>
+        </ul>
+        <a href="#">see history</a>
+    </aside>
+</div>
 </body>
 </html>

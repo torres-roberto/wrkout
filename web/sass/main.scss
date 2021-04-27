@@ -158,131 +158,271 @@ body {
    
 }
 
-.best-quilt {
-    position: relative;
-    .hits {
-        list-style-type: none;
-        display: flex;
-        flex-flow: wrap row;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
+* li {
+    max-width: 100%;
+    height: auto;
+}
 
-        height: 100%;
-        width: 100%;
-        background-color: #ecf4f3;
-        padding-bottom: 10rem;
+// .best-quilt {
+//     position: relative;
+//     // max-width: 800px;
+//     margin: 3rem auto;
+//     .hits {
+//         list-style-type: none;
+//         display: flex;
+//         flex-flow: wrap row;
+//         justify-content: center;
+//         align-content: center;
+//         align-items: center;
+
+//         height: 100%;
+//         width: 100%;
+//         background-color: #ecf4f3;
+//         padding-bottom: 10rem;
         
-        &__card {
-            position: relative;
-            transition: all .4s ease-out;
-            margin: .5rem;
-            background-color: #68b0ab;
-            overflow: hidden;
-            height: 2rem;
-            width: 25rem;
-            opacity: 0;
-            // width: 25rem;
-            // height: 25rem;
-            // border-radius: 3px;
-            box-shadow: 0 1px 3px #006a71;
-            display: flex;
-            justify-content: center;
-
-            &__content {
-                position: absolute;
-                width: 90%;
-                height: 90%;
-                box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
-            }
-        }
-
-        &__card.show {
-            height: 25rem;
-            opacity: 1;
-        }
-
-        &__card:after {
-            content: '';
-            transition: all .2s ease-in-out;
-            position: absolute;
-            width: 25rem;
-            height: 0;
-            bottom: 0;
-            background-color: black;
-            opacity: .2;
-            z-index: 1;
-        }
         
-        &__card:hover:after {
-            content: '450 LB Squat';
-            padding: 15px;
-            color: white;
-            font-size: 20px;
-            font-weight: bolder;
-            font-family: 'PT Sans Narrow';
-            height: 8rem;
-            bottom: 0;
-            opacity: .7;
-        }
-    }
+//         &__card {            
+//             position: relative;
+//             transition: all .4s ease-out;
+//             // margin: 1%;
+//             // padding: 1%;
+//             // background-color: #68b0ab;
+//             // overflow: hidden;
+//             // width: 33.33%;
+//             // height: 33.33%;
+//             opacity: 0;
+//             // width: 25rem;
+//             // height: 25rem;
+//             // border-radius: 3px;
+//             // box-shadow: 0 1px 3px #006a71;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+            
 
-    .bar {
-        position: fixed;
-        height: 10rem;
-        width: 100%;
-        background-color: rgb(78, 154, 6);// #ff7e67;
-        box-shadow: 0 1px 3px black;
-        bottom: 3rem;
-        z-index: 2;
+//             &__content {
+//                 position: absolute;
+//                 height: 100%;
+//                 width: 100%;
+//                 // background-size: 100% 100%;
+//                 // top: 0px;
+//                 // left: 0px;
+//                 // min-width: 70%;
+//                 // min-height: 100%;
+//                 // width: auto;
+//                 // height: auto;
 
-        .float-add {
-            position: absolute;
-            top: 50%;
-            transform: translate(0,-50%);
-            transition: all .3s;
-        }
+//                 // height: inherit;
+//                 // width: 30.33%;
+//                 // width: inherit;
+                
+//                 // padding: 5%;
+//                 // height: 90%;
+//                 // width: 100%;
+//                 // box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
+//             }
+//         }
 
-        .float-add:hover {
-            transition: all .3s;
-            filter: brightness(115%);
-        }
+//         &__card.show {
+//             margin: 0;
+//             height: 33.33%;
+//             width: 33.33%;
+//             // height: 43.33%;
+//             // width: 33.33%;
+//             opacity: 1;
+//         }
 
-        .float-add:active {
-            transform: translate(0, -47%);
-            box-shadow: 0 0 0 black;
-            filter: brightness(90%);
-        }
+//         &__card:after {
+//             content: '';
+//             transition: all .2s ease-in-out;
+//             position: absolute;
+//             width: 100%;
+//             height: 0;
+//             bottom: 0;
+//             background-color: black;
+//             opacity: .2;
+//             z-index: 1;
+//         }
+        
+//         &__card:hover:after {
+//             content: '450 LB Squat';
+//             padding: 15px;
+//             color: white;
+//             font-size: 2vw;
+//             font-weight: bolder;
+//             font-family: 'PT Sans Narrow';
+//             height: 25%;
+//             bottom: 0;
+//             opacity: .7;
+//         }
+//     }
 
-        .wt {
-            top: 85%;
-            padding: 2rem 2rem;
-            background: transparent;
-            border: none;
-            margin-top: 2rem;
-            margin-left: 2rem;
-            color: white;
-            font-family: monospace;
-            font-size: 3rem;
-            width: 80%;
-        }
-    }
+//     .bar {
+//         position: fixed;
+//         height: 10rem;
+//         width: 100%;
+//         background-color: rgb(78, 154, 6);// #ff7e67;
+//         box-shadow: 0 1px 3px black;
+//         bottom: 3rem;
+//         z-index: 2;
+
+//         .float-add {
+//             position: absolute;
+//             top: 50%;
+//             transform: translate(0,-50%);
+//             transition: all .3s;
+//             user-select: none;
+//         }
+
+//         .float-add:hover {
+//             transition: all .3s;
+//             filter: brightness(115%);
+//             // user-select: none;
+//         }
+
+//         .float-add:active {
+//             transform: translate(0, -47%);
+//             box-shadow: 0 0 0 black;
+//             filter: brightness(90%);
+//             // user-select: none;
+            
+//         }
+
+//         .wt {
+//             top: 85%;
+//             padding: 2rem 2rem;
+//             background: transparent;
+//             border: none;
+//             margin-top: 2rem;
+//             margin-left: 2rem;
+//             color: white;
+//             font-family: monospace;
+//             font-size: 3rem;
+//             width: 80%;
+//         }
+//     }
     
+// }
+
+// .float-add {    
+//     position: fixed;
+//     width: 60px;
+//     height: 60px;
+//     bottom: 40px;
+//     right: 40px;
+//     background-color: 006a71;
+//     border-radius: 50px;
+//     text-align: center;
+//     box-shadow: 2px 2px 3px black;
+//     font-size: 3rem;
+//     color: #ecf4f3;
+//     text-decoration: none;
+//     padding-top: 1rem;
+// }
+
+
+.sections {
+    display: flex;
 }
 
-.float-add {    
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: 006a71;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px black;
-    font-size: 3rem;
-    color: #ecf4f3;
-    text-decoration: none;
-    padding-top: 1rem;
+.side-bar-xp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    background-color: green;
+    margin-right: 2%;
 }
 
+.main-card {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 10% 1fr 1fr 10%;
+    position: relative;
+    width: 60%;
+    background-color: pink;
+}
+
+.workout-vid {
+    grid-area: 2 / 2;
+    width: 100%;
+}
+
+.side-bar-log {
+    width: 20%;
+    background-color: purple; 
+    margin-left: 2%;
+}
+
+.best-cards {
+    list-style-type: none;
+    grid-area: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+   li {
+       margin-left: 25px;
+       height: 30%;
+       background-color: cyan;
+   } 
+}
+
+.search-and-add-options {
+    background-color: gray;
+    grid-area: 3 / 2 / span 1 / span 2;
+    display: grid;
+    grid-template: 40% 1fr 30% / 1fr 12.5% 12.5%;
+
+    input {
+        grid-row-start: 2;
+        top: 50%;
+        height: 50%;
+        width: 90%;
+        margin: 0 20px;
+    }
+
+    a.exercise-list {
+        background-color: red;
+        height: 50%;
+        width: 50%;
+        text-decoration: none;
+        grid-row-start: 2;
+    }
+
+    a.add-exercise {
+        text-decoration: none;
+        grid-row-start: 2;
+        height: 50%;
+        width: 50%;
+        background-color: red;
+    }
+}
+
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 100vh;
+}
+
+.progress {
+    line-height: 0;
+    color: transparent;
+    background-color: yellow;
+    width: 45%;
+    max-width: 150px;
+    min-width: 75px;
+    height: 80%;
+}
+
+.progress::before {
+    content: "";
+    background-color: red;
+    height: 75%;
+}
+
+
+@media only screen and (min-width: 981px) {
+    
+
+}

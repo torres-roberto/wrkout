@@ -107,102 +107,87 @@ body {
     .card-stack .cards .card:hover ~ .card {
       transform: translateY(12rem); }
 
-.best-quilt {
-  position: relative; }
-  .best-quilt .hits {
-    list-style-type: none;
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: #ecf4f3;
-    padding-bottom: 10rem; }
-    .best-quilt .hits__card {
-      position: relative;
-      transition: all .4s ease-out;
-      margin: .5rem;
-      background-color: #68b0ab;
-      overflow: hidden;
-      height: 2rem;
-      width: 25rem;
-      opacity: 0;
-      box-shadow: 0 1px 3px #006a71;
-      display: flex;
-      justify-content: center; }
-      .best-quilt .hits__card__content {
-        position: absolute;
-        width: 90%;
-        height: 90%;
-        box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16), 0 14px 19px 0 rgba(0, 0, 0, 0.07); }
-    .best-quilt .hits__card.show {
-      height: 25rem;
-      opacity: 1; }
-    .best-quilt .hits__card:after {
-      content: '';
-      transition: all .2s ease-in-out;
-      position: absolute;
-      width: 25rem;
-      height: 0;
-      bottom: 0;
-      background-color: black;
-      opacity: .2;
-      z-index: 1; }
-    .best-quilt .hits__card:hover:after {
-      content: '450 LB Squat';
-      padding: 15px;
-      color: white;
-      font-size: 20px;
-      font-weight: bolder;
-      font-family: 'PT Sans Narrow';
-      height: 8rem;
-      bottom: 0;
-      opacity: .7; }
-  .best-quilt .bar {
-    position: fixed;
-    height: 10rem;
-    width: 100%;
-    background-color: #4e9a06;
-    box-shadow: 0 1px 3px black;
-    bottom: 3rem;
-    z-index: 2; }
-    .best-quilt .bar .float-add {
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      transition: all .3s; }
-    .best-quilt .bar .float-add:hover {
-      transition: all .3s;
-      filter: brightness(115%); }
-    .best-quilt .bar .float-add:active {
-      transform: translate(0, -47%);
-      box-shadow: 0 0 0 black;
-      filter: brightness(90%); }
-    .best-quilt .bar .wt {
-      top: 85%;
-      padding: 2rem 2rem;
-      background: transparent;
-      border: none;
-      margin-top: 2rem;
-      margin-left: 2rem;
-      color: white;
-      font-family: monospace;
-      font-size: 3rem;
-      width: 80%; }
+* li {
+  max-width: 100%;
+  height: auto; }
 
-.float-add {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: 006a71;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 3px black;
-  font-size: 3rem;
-  color: #ecf4f3;
-  text-decoration: none;
-  padding-top: 1rem; }
+.sections {
+  display: flex; }
+
+.side-bar-xp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  background-color: green;
+  margin-right: 2%; }
+
+.main-card {
+  display: grid;
+  grid-template: repeat(3, 1fr)/10% 1fr 1fr 10%;
+  position: relative;
+  width: 60%;
+  background-color: pink; }
+
+.workout-vid {
+  grid-area: 2 / 2;
+  width: 100%; }
+
+.side-bar-log {
+  width: 20%;
+  background-color: purple;
+  margin-left: 2%; }
+
+.best-cards {
+  list-style-type: none;
+  grid-area: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .best-cards li {
+    margin-left: 25px;
+    height: 30%;
+    background-color: cyan; }
+
+.search-and-add-options {
+  background-color: gray;
+  grid-area: 3 / 2 / span 1 / span 2;
+  display: grid;
+  grid-template: 40% 1fr 30% / 1fr 12.5% 12.5%; }
+  .search-and-add-options input {
+    grid-row-start: 2;
+    top: 50%;
+    height: 50%;
+    width: 90%;
+    margin: 0 20px; }
+  .search-and-add-options a.exercise-list {
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    text-decoration: none;
+    grid-row-start: 2; }
+  .search-and-add-options a.add-exercise {
+    text-decoration: none;
+    grid-row-start: 2;
+    height: 50%;
+    width: 50%;
+    background-color: red; }
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 100vh; }
+
+.progress {
+  line-height: 0;
+  color: transparent;
+  background-color: yellow;
+  width: 45%;
+  max-width: 150px;
+  min-width: 75px;
+  height: 80%; }
+
+.progress::before {
+  content: "";
+  background-color: red;
+  height: 75%; }
