@@ -111,6 +111,11 @@ body {
   max-width: 100%;
   height: auto; }
 
+.column {
+  float: left;
+  padding: 10px;
+  height: 100vh; }
+
 .sections {
   display: flex; }
 
@@ -123,11 +128,13 @@ body {
   margin-right: 2%; }
 
 .main-card {
+  position: relative;
   display: grid;
   grid-template: repeat(3, 1fr)/10% 1fr 1fr 10%;
-  position: relative;
   width: 60%;
-  background-color: pink; }
+  height: 80vh;
+  background-color: pink;
+  margin: auto; }
 
 .workout-vid {
   grid-area: 2 / 2;
@@ -153,7 +160,7 @@ body {
   background-color: gray;
   grid-area: 3 / 2 / span 1 / span 2;
   display: grid;
-  grid-template: 40% 1fr 30% / 1fr 12.5% 12.5%; }
+  grid-template: 40% 1fr 40% / 1fr 12.5% 12.5%; }
   .search-and-add-options input {
     grid-row-start: 2;
     top: 50%;
@@ -161,22 +168,25 @@ body {
     width: 90%;
     margin: 0 20px; }
   .search-and-add-options a.exercise-list {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
     background-color: red;
-    height: 50%;
-    width: 50%;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100px;
     text-decoration: none;
     grid-row-start: 2; }
   .search-and-add-options a.add-exercise {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
     text-decoration: none;
     grid-row-start: 2;
-    height: 50%;
-    width: 50%;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100px;
     background-color: red; }
-
-.column {
-  float: left;
-  padding: 10px;
-  height: 100vh; }
 
 .progress {
   line-height: 0;

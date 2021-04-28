@@ -320,6 +320,11 @@ body {
 //     padding-top: 1rem;
 // }
 
+.column {
+    float: left;
+    padding: 10px;
+    height: 100vh;
+}
 
 .sections {
     display: flex;
@@ -335,11 +340,13 @@ body {
 }
 
 .main-card {
+    position: relative;
     display: grid;
     grid-template: repeat(3, 1fr) / 10% 1fr 1fr 10%;
-    position: relative;
     width: 60%;
+    height: 80vh;
     background-color: pink;
+    margin: auto;
 }
 
 .workout-vid {
@@ -371,7 +378,7 @@ body {
     background-color: gray;
     grid-area: 3 / 2 / span 1 / span 2;
     display: grid;
-    grid-template: 40% 1fr 30% / 1fr 12.5% 12.5%;
+    grid-template: 40% 1fr 40% / 1fr 12.5% 12.5%;
 
     input {
         grid-row-start: 2;
@@ -382,28 +389,32 @@ body {
     }
 
     a.exercise-list {
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
         background-color: red;
-        height: 50%;
-        width: 50%;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 100px;
         text-decoration: none;
         grid-row-start: 2;
     }
 
     a.add-exercise {
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
         text-decoration: none;
         grid-row-start: 2;
-        height: 50%;
-        width: 50%;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 100px;
         background-color: red;
     }
 }
 
 
-.column {
-    float: left;
-    padding: 10px;
-    height: 100vh;
-}
+
 
 .progress {
     line-height: 0;
